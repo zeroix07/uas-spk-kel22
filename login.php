@@ -2,52 +2,51 @@
 
 <div class="content-wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 style="font-size: 30px; color: #6495ED;">Silahkan Log-in</h4>
-                <hr style="background-color: #6495ED; height:5px;">
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col-md-6">
-                <div class="alert alert-info">
-                    <br />
-                    <?php if ($_GET['error_login'] == 1) : ?>
-                        <div class="alert alert-danger">
-                            Anda Harus Login Terlebih Dahulu !
+        <div class="row d-flex justify-content-center mb-5 mt-5 overflow-auto">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-6 text-center p-5" style="background-image: linear-gradient(rgba(1, 147, 172, 1),rgba(62, 196, 219, 1));">
+                            <img src="assets/img/padi.png" class="img-fluid rounded-start" alt="...">
+                            <h5 class="text-white">
+                                SISTEM PENUNJANG KEPUTUSAN PEMILIHAN BIBIT PADI UNGGULAN
+                            </h5>
+                            <hr class="text-white">
+                            <h6 class="text-center text-white">
+                                STMIK TASIKMALAYA
+                            </h6>
                         </div>
-                    <?php endif ?>
-                    <form method="post" action="proses_login.php">
-                        <label>Enter Username : </label>
-                        <input required type="text" name="username" class="form-control" />
-                        <label>Enter Password : </label>
-                        <input required type="password" name="password" class="form-control" />
-                        <hr />
-                        <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-user"></span> &nbsp;Log Me In </button>&nbsp;
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="alert alert-success">
-                    <br />
-                    <div class="card text-end" style="width:fit-content;">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text">
-                                <b>Aplikasi ini dipersembahkan oleh Kelompok 22</b> <br>
-                                1. Fadhel Muhammad Apriansyah <br>
-                                2. Livia Nur Meilinda <br>
-                                3. Rikza Fauzan Nurfadilah <br>
-                                4. Rosi Maelani <br>
-                                5. Yusri Azra Lazwardi <br>
-                            </p>
-
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card-body">
+                                <?php if ($_GET['error_login'] == 1) : ?>
+                                    <div class="alert alert-danger">
+                                        Anda Harus Login Terlebih Dahulu !
+                                    </div>
+                                <?php endif ?>
+                                <div class="text-center">
+                                    <img src="assets/img/logo.svg" width="90" alt="">
+                                    <h2>Login</h2>
+                                </div>
+                                <hr>
+                                <form method="post" action="proses_login.php">
+                                    <div class="form-floating mb-3">
+                                        <input required name="username" type="text" class="form-control" id="Username" placeholder="Masukan Username">
+                                        <label for="Username">Username</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input required name="password" type="password" class="form-control" id="pass" placeholder="Masukan Password">
+                                        <label for="pass">Email address</label>
+                                    </div>
+                                    <hr />
+                                    <div class="d-grid ">
+                                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-user-plus"></i> &nbsp;Log Me In </button>&nbsp;
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div><br><br><br><br><br><br>
+    </div>
     <?php include 'footer.php'; ?>

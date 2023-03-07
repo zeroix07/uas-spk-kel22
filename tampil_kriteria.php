@@ -10,9 +10,9 @@ if (empty($_SESSION['id'])) {
 <div class="content-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h4 style="font-size: 30px; color: #6495ED;">Master Data Kriteria</h4>
-                <hr style="background-color: #6495ED; height:5px;">
+            <div class="col-md-12 mt-4">
+                <h4>Master Data Kriteria</h4>
+                <hr>
             </div>
         </div>
         <div class="row">
@@ -25,7 +25,7 @@ if (empty($_SESSION['id'])) {
             </div>
         </div>
         <div class="row">
-            <div><a href="input_kriteria.php" class="btn btn-info">Tambah Data</a></div>
+            <div class="mb-3"><a href="input_kriteria.php" class="btn btn-secondary">Tambah Data</a></div>
             <br>
             <div class="table-responsive">
                 <table id="example1" class="table table-striped table-bordered">
