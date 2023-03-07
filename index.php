@@ -31,7 +31,7 @@ include 'menu.php';
                             <div class="panel-heading mb-4">
                                 <div class="row">
                                     <div class="col-md-4 text-center ">
-                                        <i class="fs-1 fa fa-group"></i>
+                                        <i class="fs-1 fa fa-user"></i>
                                     </div>
                                     <div class="col-md-8 text-right">
                                         <div class="huge fs-4 fw-semibold mb-1"><?php echo $db->totaladmin() ?></div>
@@ -103,7 +103,7 @@ include 'menu.php';
                             <div class="panel-heading mb-4">
                                 <div class="row">
                                     <div class="col-md-4 text-center ">
-                                        <i class="fs-1 fa fa-group"></i>
+                                        <i class="fs-1 fa fa-tasks"></i>
                                     </div>
                                     <div class="col-md-8 text-right">
                                         <div class="huge fs-4 fw-semibold mb-1"><?php echo $db->totalalternatif() ?></div>
