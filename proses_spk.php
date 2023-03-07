@@ -60,7 +60,7 @@ if (empty($_SESSION['id'])) {
             </div>
         </div>
         <br>
-        <div id="proses_spk" style="display:none;height:380px" class="mb-5 card card-body overflow-auto">
+        <div id="proses_spk" style="display:none;height:340px" class="mb-5 card card-body overflow-auto">
             <div class="row">
                 <h3>Normalisasi</h3>
                 <div class="table-responsive">
