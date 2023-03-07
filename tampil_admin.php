@@ -8,11 +8,11 @@ if (empty($_SESSION['id'])) {
 <?php include 'header.php'; ?>
 <?php include 'menu.php'; ?>
 <div class="content-wrapper">
-    <div class="container">
+    <div class="container mt-4">
         <div class="row">
             <div class="col-md-12">
-                <h4 style="font-size: 30px; color: #6495ED;">Master Data Admin</h4>
-                <hr style="background-color: #6495ED; height:5px;">
+                <h4>Master Data Admin</h4>
+                <hr>
             </div>
         </div>
         <div class="row">
@@ -25,7 +25,7 @@ if (empty($_SESSION['id'])) {
             </div>
         </div>
         <div class="row">
-            <div><a href="input_admin.php" class="btn btn-info">Tambah Data</a></div>
+            <div class="mb-2"><a href="input_admin.php" class="btn btn-secondary">Tambah Data</a></div>
             <br>
             <div class="table-responsive">
                 <table id="example1" class="table table-striped table-bordered">

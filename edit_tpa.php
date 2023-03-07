@@ -12,7 +12,7 @@ if (empty($_SESSION['id'])) {
         <div class="row">
             <div class="col-md-12">
                 <br />
-                <div class="panel panel-default">
+                <div class="card card-body mt-3 mb-5 panel panel-default">
                     <div class="panel-heading">
                         Form Kriteria
                     </div>
@@ -43,8 +43,8 @@ if (empty($_SESSION['id'])) {
                                 <?php endforeach ?>
                             <?php endforeach ?>
 
-                            <div class="form-group col-md-12">
-                                <button class="btn btn-primary">Simpan</button>
+                            <div class="form-group col-md-12 mt-3">
+                                <button class="btn btn-secondary">Simpan</button>
                             </div>
                         </form>
                     </div>
