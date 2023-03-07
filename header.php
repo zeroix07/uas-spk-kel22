@@ -34,10 +34,10 @@ include 'db/db_config.php';
 </head>
 
 <body>
-    <div class="navbar navbar-inverse set-radius-zero bg-dark navbar-light" style="width:100%;color:white;">
+    <div class="navbar navbar-inverse set-radius-zero bg-dark navbar-light py-4" style="width:100%;color:white;">
         <div class="container">
             <div class="news-content">
-                <h3 class="page-head" style="color:white">Sistem Penunjang Keputusan Pemilihan Bibit Padi Unggul</h3>
+                <h3 class="page-head" style="color:white"><img src="assets/img/logo.svg" width="45" alt="">Sistem Penunjang Keputusan Pemilihan Bibit Padi Unggul</h3>
             </div>
             <div class="navbar-header">
                 <a class="btn btn-light btn-md px-4 text-center" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">

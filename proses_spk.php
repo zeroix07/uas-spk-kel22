@@ -60,7 +60,7 @@ if (empty($_SESSION['id'])) {
             </div>
         </div>
         <br>
-        <div id="proses_spk" style="display:none">
+        <div id="proses_spk" style="display:none;height:340px" class="mb-5 card card-body overflow-auto">
             <div class="row">
                 <h3>Normalisasi</h3>
                 <div class="table-responsive">
@@ -142,57 +142,55 @@ if (empty($_SESSION['id'])) {
                         <thead>
                             <tr>
                                 <th>Hasil </th>
-                                <?php $no = 1;
-                                foreach ($db->select('kriteria', 'kriteria')->get() as $th) : ?>
-                                    <th>K<?= $no ?></th>
-                                <?php $no++;
-                                endforeach ?>
+                                <?php $no = 1; foreach ($db->select('kriteria','kriteria')->get() as $th): ?>
+                                <th>K<?= $no?></th>
+                                <?php $no++; endforeach ?>
                                 <th rowspan="2" style="padding-bottom:25px">Hasil</th>
                                 <th rowspan="2" style="padding-bottom:25px">Ranking</th>
                             </tr>
                             <tr>
                                 <th>Bobot </th>
-                                <?php foreach ($db->select('bobot', 'kriteria')->get() as $th) : ?>
-                                    <th><?= $th['bobot'] ?></th>
+                                <?php foreach ($db->select('bobot','kriteria')->get() as $th): ?>
+                                <th><?= $th['bobot']?></th>
                                 <?php endforeach ?>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            $no = 1;
-                            $bulan = date('m');
-                            $tahun = date('Y');
-                            $tanggal = date('Y-m-d');
+                                $no = 1;
+                                $bulan = date('m'); 
+                                $tahun = date('Y'); 
+                                $tanggal = date('Y-m-d');
 
-                            $minggu = $db->weekOfMonth($tanggal);
-                            foreach ($db->select('distinct(alternatif.nama),hasil_tpa.*,hasil_spk.*', 'alternatif,hasil_tpa,hasil_spk')->where('alternatif.id_calon_kr=hasil_tpa.id_calon_kr and alternatif.id_calon_kr=hasil_spk.id_calon_kr and hasil_spk.minggu=' . $minggu . ' and hasil_spk.bulan=' . $bulan . ' and hasil_spk.tahun=' . $tahun . '')->order_by('hasil_spk.hasil_spk', 'desc')->get() as $data) :
+                                $minggu = $db->weekOfMonth($tanggal);
+                                foreach ($db->select('distinct(alternatif.nama),hasil_tpa.*,hasil_spk.*','alternatif,hasil_tpa,hasil_spk')->where('alternatif.id_calon_kr=hasil_tpa.id_calon_kr and alternatif.id_calon_kr=hasil_spk.id_calon_kr')->order_by('hasil_spk.hasil_spk','desc')->get() as $data):
                             ?>
                                 <tr>
-                                    <td><?= $data['nama'] ?></td>
-                                    <?php foreach ($db->select('kriteria', 'kriteria')->get() as $td) : ?>
-                                        <td><?= number_format($db->rumus($db->getnilaisubkriteria($data[$td['kriteria']]), $td['kriteria']), 2); ?></td>
+                                    <td><?= $data['nama']?></td>
+                                    <?php foreach ($db->select('kriteria','kriteria')->get() as $td): ?>
+                                    <td><?= number_format($db->rumus($db->getnilaisubkriteria($data[$td['kriteria']]),$td['kriteria']),2);?></td>
                                     <?php endforeach ?>
                                     <td>
-                                        <?php
+                                    <?php 
                                         $hasil = [];
-                                        foreach ($db->select('kriteria', 'kriteria')->get() as $dt) {
-                                            array_push($hasil, $db->rumus($db->getnilaisubkriteria($data[$dt['kriteria']]), $dt['kriteria']) * $db->bobot($dt['kriteria']));
+                                        foreach($db->select('kriteria','kriteria')->get() as $dt){
+                                            array_push($hasil,$db->rumus($db->getnilaisubkriteria($data[$dt['kriteria']]),$dt['kriteria'])*$db->bobot($dt['kriteria']));
                                         }
-                                        echo $r = number_format(array_sum($hasil), 2);
-                                        ?>
+                                        echo $r = number_format(array_sum($hasil),2);
+                                    ?>
                                     </td>
                                     <td>
-                                        <?= $no ?>
+                                        <?= $no?>
                                     </td>
                                 </tr>
                             <?php
                                 $no++;
-                            endforeach;
+                                endforeach;
                             ?>
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div>  
         </div>
 
     </div>
