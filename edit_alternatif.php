@@ -12,7 +12,7 @@ if (empty($_SESSION['id'])) {
         <div class="row">
             <div class="col-md-12">
                 <br />
-                <div class="panel panel-default">
+                <div class="card card-body mt-3 mb-5 panel panel-default">
                     <div class="panel-heading">
                         Form Alternatif
                     </div>
@@ -30,8 +30,8 @@ if (empty($_SESSION['id'])) {
                                     <label for="nama">Nama alternatif</label>
                                     <input type="text" class="form-control" id="nama" name="nama" value="<?= $val['nama'] ?>">
                                 </div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary">Simpan</button>
+                                <div class="form-group mt-3">
+                                    <button class="btn btn-secondary">Simpan</button>
                                 </div>
                             <?php endforeach ?>
                         </form>

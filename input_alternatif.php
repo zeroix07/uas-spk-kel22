@@ -13,8 +13,8 @@ if (empty($_SESSION['id'])) {
             <div class="row">
                 <div class="col-md-12">
                     <br />
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
+                    <div class="card card-body mt-3 mb-5 panel panel-default">
+                        <div class="fs-5 fw-semibold panel-heading">
                             Form alternatif
                         </div>
                         <div class="panel-body">
@@ -30,8 +30,8 @@ if (empty($_SESSION['id'])) {
                                     <input type="text" required rows="2" class="form-control" id="nama" name="nama">
                                 </div>
 
-                                <div class="form-group">
-                                    <button class="btn btn-primary">Simpan</button>
+                                <div class="form-group mt-3">
+                                    <button class="btn btn-secondary">Simpan</button>
                                 </div>
                             </form>
                         </div>

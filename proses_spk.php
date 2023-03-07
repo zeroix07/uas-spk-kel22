@@ -5,18 +5,21 @@ if (empty($_SESSION['id'])) {
     header('location:login.php?error_login=1');
 }
 ?>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php include 'header.php'; ?>
 <?php include 'menu.php'; ?>
 <div class="content-wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 style="font-size: 30px; color: #6495ED;">Proses SPK</h4>
-                <hr style="background-color: #6495ED; height:5px;">
+        <div class="row mt-4 mb-2">
+            <div class="col-md-6">
+                <h4 class="text-muted">Proses SPK</h4>
             </div>
+            <div class="col-md-6 text-end">
+                <h4>Tabel Hasil TPA</h4>
+            </div>
+            <hr>
         </div>
         <div class="row">
-            <h3>Tabel Hasil TPA</h3>
             <div class="table-responsive">
                 <table id="example1" class="table table-striped table-bordered table-hover">
                     <thead>
@@ -51,11 +54,13 @@ if (empty($_SESSION['id'])) {
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <button class="btn btn-lg" onclick="tpl()">PROSES</button>
+                <div class="d-grid">
+                    <button class="btn btn-lg btn-secondary" id="hide-button">PROSES</button>
+                </div>
             </div>
         </div>
         <br>
-        <div id="proses_spk" style="display: none;">
+        <div id="proses_spk" style="display:none">
             <div class="row">
                 <h3>Normalisasi</h3>
                 <div class="table-responsive">
@@ -195,18 +200,12 @@ if (empty($_SESSION['id'])) {
 <!-- CONTENT-WRAPPER SECTION END-->
 <?php include 'footer.php'; ?>
 <script type="text/javascript">
-    $(function() {
-        $("#proses").addClass('menu-top-active');
-        // $.ajax({
-        //     url:'truncate_tpa.php',
-        //     success:function(data){
-        //         //alert(data);
-
-        //     }
-        // });
+    $(document).ready(function() {
+        $('#hide-button').click(function() {
+            $('#proses_spk').toggle();
+        });
     });
-
-    function tpl() {
-        $("#proses_spk").show();
-    }
+    // $(document).ready(function tpl() {
+    //     $('#proses_spk').toggle();
+    // })
 </script>

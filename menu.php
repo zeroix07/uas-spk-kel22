@@ -29,8 +29,8 @@
                                      </ul>
                                  </div>
 
-                                 <a href="tampil_admin.php" class="btn btn-outline-primary btn-md mx-1">Pemilihan Bibit Unggul</a>
-                                 <a href="tampil_alternatif.php" class="btn btn-outline-primary btn-md mx-1">Proses SPK</a>
+                                 <a href="tampil_tpa.php" class="btn btn-outline-primary btn-md mx-1">Pemilihan Bibit Unggul</a>
+                                 <a href="proses_spk.php" class="btn btn-outline-primary btn-md mx-1">Proses SPK</a>
                                  <a href="ubah_password.php" class="btn btn-outline-primary btn-md mx-1">Ubah Password</a>
                              </div>
                              <div class="col-md-2">

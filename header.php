@@ -40,7 +40,7 @@ include 'db/db_config.php';
                 <h3 class="page-head" style="color:white">Sistem Penunjang Keputusan Pemilihan Bibit Padi Unggul</h3>
             </div>
             <div class="navbar-header">
-                <a class="btn btn-light btn-sm px-4 text-center" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-light btn-md px-4 text-center" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fa fa-bars text-secondary"></i>
                 </a>
 
