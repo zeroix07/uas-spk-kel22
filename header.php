@@ -17,7 +17,8 @@ include 'db/db_config.php';
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <!-- FONT AWESOME ICONS  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,20 +30,19 @@ include 'db/db_config.php';
     <link rel="stylesheet" type="text/css" href="assets/css/datatable.css">
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/datatable.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="navbar navbar-inverse set-radius-zero" style="width:100%;background-image:linear-gradient(to left bottom,blue,purple);color:white;">
+    <div class="navbar navbar-inverse set-radius-zero bg-dark navbar-light" style="width:100%;color:white;">
         <div class="container">
-            <marquee class="news-content">
-                <h4 class="page-head" style="color:white">Sistem Penunjang Keputusan Pemilihan Bibit Padi Unggul</h4>
-            </marquee>
+            <div class="news-content">
+                <h3 class="page-head" style="color:white">Sistem Penunjang Keputusan Pemilihan Bibit Padi Unggul</h3>
+            </div>
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <a class="btn btn-light btn-sm px-4 text-center" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa fa-bars text-secondary"></i>
+                </a>
 
             </div>
         </div>
