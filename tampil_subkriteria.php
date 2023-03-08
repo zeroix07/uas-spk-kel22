@@ -27,7 +27,7 @@ if (empty($_SESSION['id'])) {
         <div class="row">
             <div class="mb-3"><a href="input_subkriteria.php" class="btn btn-secondary">Tambah Data</a></div>
             <br>
-            <div class="table-responsive">
+            <div class="table-responsive" style="height: 500px;">
                 <table id="example1" class="table table-striped table-bordered">
                     <thead>
                         <tr>

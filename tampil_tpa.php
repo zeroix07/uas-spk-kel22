@@ -30,31 +30,29 @@ if (empty($_SESSION['id'])) {
             <div class="table-responsive">
                 <table id="example1" class="table table-striped table-bordered">
                     <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <?php foreach ($db->select('kriteria', 'kriteria')->get() as $kr) : ?>
-                                <th><?= $kr['kriteria'] ?></th>
-                            <?php endforeach ?>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $no = 1;
-                        foreach ($db->select('alternatif.id_calon_kr,alternatif.nama,hasil_tpa.*', 'alternatif,hasil_tpa')->where('alternatif.id_calon_kr=hasil_tpa.id_calon_kr')->get() as $data) : ?>
+                    <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <?php foreach ($db->select('kriteria','kriteria')->get() as $kr ): ?>
+                                <th><?= $kr['kriteria']?></th>
+                                <?php endforeach ?>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no=1; foreach($db->select('alternatif.id_calon_kr,alternatif.nama,hasil_tpa.*','alternatif,hasil_tpa')->where('alternatif.id_calon_kr=hasil_tpa.id_calon_kr')->get() as $data): ?>
                             <tr>
-                                <td><?= $no; ?></td>
-                                <td><?= $data['nama'] ?></td>
-                                <?php foreach ($db->select('kriteria', 'kriteria')->get() as $k) : ?>
-                                    <td><?= $db->getnamesubkriteria($data[$k['kriteria']]) ?> (Nilai = <?= $db->getnilaisubkriteria($data[$k['kriteria']]) ?>)</td>
+                                <td><?= $no;?></td>
+                                <td><?= $data['nama']?></td>
+                                <?php foreach ($db->select('kriteria','kriteria')->get() as $k): ?>
+                                <td><?= $db->getnamesubkriteria($data[$k['kriteria']])?> (Nilai = <?= $db->getnilaisubkriteria($data[$k['kriteria']])?>)</td>
                                 <?php endforeach ?>
                                 <td>
-                                    <a class="btn btn-warning" href="edit_tpa.php?id=<?php echo $data[0] ?>">Edit</a>
-                                    <a class="btn btn-danger" onclick="return confirm('Yakin Hapus?')" href="delete_tpa.php?id=<?php echo $data[0] ?>">Hapus</a>
+                                    <a class="btn btn-warning" href="edit_tpa.php?id=<?php echo $data[0]?>">Edit</a>
+                                    <a class="btn btn-danger" onclick="return confirm('Yakin Hapus?')" href="delete_tpa.php?id=<?php echo $data[0]?>">Hapus</a>
                                 </td>
                             </tr>
-                        <?php $no++;
-                        endforeach; ?>
+                            <?php $no++; endforeach; ?>
                     </tbody>
                 </table>
             </div>

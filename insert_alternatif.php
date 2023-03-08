@@ -24,3 +24,4 @@ if ($_FILES['foto']['size'] < 2000000) {
 } else {
 	header('location:input_alternatif.php?error_msg=error_ukuran');
 }
+?>
