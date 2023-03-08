@@ -8,7 +8,7 @@
 <?php include 'header.php';?>
 <?php include 'menu.php';?>
 <div class="content-wrapper">
-    <div class="container pt-2 pb-5">
+    <div class="container pt-2 pb-3">
         <div class="row">
             <div class="col-md-12 pb-5 my-5">
             <br/>  
@@ -23,7 +23,7 @@
                                   <?= $_GET['error_msg']; ?>
                               </div>
                           <?php endif ?>  
-                          <div class="form-group">
+                          <div class="form-group mb-4">
 								<label for="inputEmail">New Password</label>
 								<input required type="password" name="np" class="form-control" id="inputEmail" placeholder="New Password">
 							</div>

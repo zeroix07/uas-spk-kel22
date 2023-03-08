@@ -50,6 +50,30 @@ include 'menu.php';
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
+                    <a style="text-decoration: none;" href="tampil_alternatif.php" id="ck">
+                        <div class="mb-3 card card-body card-index panel panel-primary">
+                            <div class="panel-heading mb-4">
+                                <div class="row">
+                                    <div class="col-md-4 text-center ">
+                                        <i class="fs-1 fa fa-tasks"></i>
+                                    </div>
+                                    <div class="col-md-8 text-right">
+                                        <div class="huge fs-4 fw-semibold mb-1"><?php echo $db->totalalternatif() ?></div>
+                                        <div>Total Alternatif</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-footer">
+                                <span class="pull-left">Klik untuk melihat details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
                     <a style="text-decoration: none;" href="tampil_kriteria.php" id="ds">
                         <div class="mb-3 card card-body card-index panel panel-primary">
                             <div class="panel-heading mb-4">
@@ -84,30 +108,6 @@ include 'menu.php';
                                     <div class="col-md-8 text-right">
                                         <div class="huge fs-4 fw-semibold mb-1"><?php echo $db->totalsubkriteria() ?></div>
                                         <div>Total Sub Kriteria</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel-footer">
-                                <span class="pull-left">Klik untuk melihat details</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <a style="text-decoration: none;" href="tampil_alternatif.php" id="ck">
-                        <div class="mb-3 card card-body card-index panel panel-primary">
-                            <div class="panel-heading mb-4">
-                                <div class="row">
-                                    <div class="col-md-4 text-center ">
-                                        <i class="fs-1 fa fa-tasks"></i>
-                                    </div>
-                                    <div class="col-md-8 text-right">
-                                        <div class="huge fs-4 fw-semibold mb-1"><?php echo $db->totalalternatif() ?></div>
-                                        <div>Total Alternatif</div>
                                     </div>
                                 </div>
                             </div>

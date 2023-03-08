@@ -136,14 +136,14 @@ if (empty($_SESSION['id'])) {
                 </div>
             </div>
             <div class="row">
-                <h3>Perankingan</h3>
+                <h3>Perangkingan</h3>
                 <div class="table-responsive">
                     <table id="example4" class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Hasil </th>
                                 <?php $no = 1; foreach ($db->select('kriteria','kriteria')->get() as $th): ?>
-                                <th>K<?= $no?></th>
+                                <th>A<?= $no?></th>
                                 <?php $no++; endforeach ?>
                                 <th rowspan="2" style="padding-bottom:25px">Hasil</th>
                                 <th rowspan="2" style="padding-bottom:25px">Ranking</th>
@@ -158,11 +158,6 @@ if (empty($_SESSION['id'])) {
                         <tbody>
                             <?php
                                 $no = 1;
-                                $bulan = date('m'); 
-                                $tahun = date('Y'); 
-                                $tanggal = date('Y-m-d');
-
-                                $minggu = $db->weekOfMonth($tanggal);
                                 foreach ($db->select('distinct(alternatif.nama),hasil_tpa.*,hasil_spk.*','alternatif,hasil_tpa,hasil_spk')->where('alternatif.id_calon_kr=hasil_tpa.id_calon_kr and alternatif.id_calon_kr=hasil_spk.id_calon_kr')->order_by('hasil_spk.hasil_spk','desc')->get() as $data):
                             ?>
                                 <tr>
@@ -190,7 +185,7 @@ if (empty($_SESSION['id'])) {
                         </tbody>
                     </table>
                 </div>
-            </div>  
+            </div> 
         </div>
 
     </div>
