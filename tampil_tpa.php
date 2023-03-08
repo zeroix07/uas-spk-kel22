@@ -11,7 +11,7 @@ if (empty($_SESSION['id'])) {
     <div class="container">
         <div class="row">
             <div class="col-md-12 mt-4">
-                <h4>Penilaian Bibit Unggul</h4>
+                <h4>Penilaian Bibit Terbaik</h4>
                 <hr>
             </div>
         </div>

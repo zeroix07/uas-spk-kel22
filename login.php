@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input required name="password" type="password" class="form-control" id="pass" placeholder="Masukan Password">
-                                        <label for="pass">Email address</label>
+                                        <label for="pass">Password</label>
                                     </div>
                                     <hr />
                                     <div class="d-grid ">
