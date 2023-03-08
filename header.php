@@ -34,7 +34,7 @@ include 'db/db_config.php';
 </head>
 
 <body>
-    <div class="navbar navbar-inverse set-radius-zero bg-dark navbar-light py-4" style="width:100%;color:white;">
+    <div class="navbar navbar-inverse set-radius-zero bg-dark navbar-light py-4 sticky-top" style="width:100%;color:white;">
         <div class="container">
             <div class="news-content">
                 <h3 class="page-head" style="color:white"><img src="assets/img/logo.svg" width="45" alt="">Sistem Penunjang Keputusan Pemilihan Bibit Padi Terbaik</h3>
