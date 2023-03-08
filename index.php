@@ -12,7 +12,7 @@ include 'menu.php';
 
 <div class="content-wrapper">
     <div class="content">
-        <div class="container" style="padding-top:60px; padding-bottom:60px;">
+        <div class="container" style="padding-top:70px; padding-bottom:60px;">
             <div class="row py-3">
                 <div class="col-md-6">
                     <h4>Dashboard</h4>
