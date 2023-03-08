@@ -9,7 +9,7 @@
                         <div class="col-md-6 text-center p-5" style="background-image: linear-gradient(rgba(1, 147, 172, 1),rgba(62, 196, 219, 1));">
                             <img src="assets/img/padi.png" class="img-fluid rounded-start" alt="...">
                             <h5 class="text-white">
-                                SISTEM PENUNJANG KEPUTUSAN PEMILIHAN BIBIT PADI UNGGULAN
+                                SISTEM PENUNJANG KEPUTUSAN PEMILIHAN BIBIT PADI TERBAIK
                             </h5>
                             <hr class="text-white">
                             <h6 class="text-center text-white">
