@@ -8,9 +8,9 @@
 <?php include 'header.php';?>
 <?php include 'menu.php';?>
 <div class="content-wrapper">
-    <div class="container">
+    <div class="container pt-2 pb-5">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 pb-5 my-5">
             <br/>  
               <div class="panel panel-default">
                   <div class="panel-heading">
